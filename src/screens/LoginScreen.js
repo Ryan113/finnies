@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, TextInput} from 'react-native';
 
 const LoginScreen = ({term, onTermChange, onTermSubmit}) => {
     return (
-        <View style={styles.backgroundStyle}>
+        <View>
             <TextInput
                 autoCapitalize= 'none'
                 autoCorrect={false}
@@ -13,7 +13,7 @@ const LoginScreen = ({term, onTermChange, onTermSubmit}) => {
                 onChangeText={onTermChange}
                 onEndEditing={onTermSubmit}
             />
-            <TextInput
+             <TextInput
                 autoCapitalize= 'none'
                 autoCorrect={false}
                 placeholder='enter password' 
@@ -29,17 +29,16 @@ const LoginScreen = ({term, onTermChange, onTermSubmit}) => {
 
 let styles = StyleSheet.create({
     backgroundStyle: {
-        backgroundColor: 'lightgray',
-        height: 50,
-        borderRadius: 5,
         marginHorizontal: 15,
-        flexDirection: 'row',
+        flexDirection: 'column',
         marginTop: 10,
         marginBottom: 10
     },
     inputStyle: {
-        flex: 1,
-        fontSize: 18
+        backgroundColor: 'lightgray',
+        margin: 5,
+        padding: 5,
+        fontSize: 18,
     }
 })
 
